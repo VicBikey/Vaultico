@@ -5,7 +5,7 @@ body {
 }
 
 .main_wrapper {
-  width: 1600px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +14,7 @@ body {
 .nav {
   top: 0;
   display: flex;
-  width: 100%;
+  max-width: 100%;
   align-content: center;
   justify-content: space-around;
   align-items: center;
@@ -58,7 +58,9 @@ body {
 .logo {
   width: fit-content;
   height: 100%;
-  float: left;
+  /* float: left; */
+  display: flex;
+  /* justify-self: flex-start; */
   margin: 7px;
 }
 
@@ -250,8 +252,6 @@ trusted_imgs {
 .container2 {
   display: grid;
   place-items: center;
-  /* padding-bottom: 60px; */
-  /* padding-top: 80px; */
 }
 
 .Why-Valutico {
@@ -293,24 +293,20 @@ h2 {
 }
 
 .burger-menu,
-.burger-menu-btn {
+burger-menu-btn {
   display: none;
   cursor: pointer;
 }
 
-.burger-main {
-  display: none;
-}
-
 /* Mobile Version*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   .burger-menu-btn {
-    margin-left: 70px;
     display: block;
+    margin-left: 70px;
     width: 20px;
     height: 20px;
-    background-image: url(burger.png), url(close.png);
+    background-image: url(Images/burger.png), url(Images/close.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center, center left 50px;
@@ -465,7 +461,7 @@ h2 {
     text-align: center;
     text-decoration: none;
     font-size: 10px;
-    /* cursor: pointer; */
+    cursor: pointer;
     border-radius: 10px;
     align-items: center;
     display: flex;
@@ -639,29 +635,17 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 830px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .burger-menu-btn {
     margin-left: 700px;
     display: block;
     width: 40px;
     height: 40px;
-    background-image: url(burger.png), url(close.png);
+    background-image: url(Images/burger.png), url(Images/close.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center, center left 50px;
   }
-
-  .burger-menu ul li a {
-    display: block;
-    height: 100%;
-    font-size: 1.5rem;
-    padding: 30px 0;
-    flex-basis: 100%;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-  }
-
 
   .burger-menu {
     padding-top: 7px;
